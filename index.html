@@ -1,196 +1,670 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alla Bindhu Sree Reddy - Portfolio</title>
+  <meta name="description" content="Bindhu Sree Alla — Software Engineer with 2+ years at JPMorgan Chase. MS in Computer Science at University of Florida. Expertise in Java, Spring Boot, React, AI/ML, and Cloud Computing.">
+  <meta name="keywords" content="Bindhu Sree Alla, Software Engineer, Portfolio, JPMorgan Chase, University of Florida, Java, Python, React, AWS">
+  <meta name="author" content="Bindhu Sree Alla">
+  <title>Bindhu Sree Alla — Software Engineer Portfolio</title>
+
+  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP & Typed.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
-<div class="sidebar">
-  <div class="sidebar-header">
-    <img src="BindhuPic.jpeg" alt="Alla Bindhu Sree Reddy">
-    <h1>Bindhu Sree Reddy Alla</h1>
-  </div>
-  <nav class="sidebar-nav">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">Bindhu Sree</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="Bindhu_Sree_Resume.pdf" class="btn-resume" download>
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
   </nav>
-</div>
 
-<div class="main-content">
-  <section id="home" class="section full-height">
-    <div class="home-content">
-      <h1>Hi, I'm Bindhu Sree Reddy</h1>
-      <h3>I am a <span class="typed-text"></span></h3>
-      <div class="profiles">
-        <a href="https://www.linkedin.com/in/bindhu-sree-reddy-91b0791b9" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:bindhusreer.alla@ufl.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/bindhusreereddy" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  <!-- ===== HERO ===== -->
+  <section id="home" class="section">
+    <canvas id="particles-canvas"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Bindhu Sree Alla</h1>
+          <h2 class="hero-role"><span class="typed-text"></span></h2>
+          <p class="hero-summary">
+            Full-Stack Engineer with 2+ years of experience building production-grade systems at JPMorgan Chase across Software, AI/ML, and Cloud. Master's in Computer Science from the University of Florida. I turn complex problems into fast, reliable software that scales.
+          </p>
+          <div class="hero-cta">
+            <a href="Bindhu_Sree_Resume.pdf" class="btn-primary" download>
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/bindhusreereddy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/bindhusreereddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:bindhuus24@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-image-frame">
+            <img src="BindhuPic.jpeg" alt="Bindhu Sree Alla" loading="eager">
+          </div>
+          <div class="experience-badge">
+            <div class="badge-label">Experience</div>
+            <div class="badge-value">2+ Years</div>
+          </div>
+        </div>
       </div>
-      <div class="cta-buttons">
-        <a href="Bindhu1R_ML.pdf" class="btn-primary" download>Download Resume</a>
-        <a href="#contact" class="btn-secondary">Contact Me</a>
-      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+      Scroll Down
     </div>
   </section>
 
+  <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
-    <h2><span>About Me</span></h2>
-    <div class="about-content">
-      <div class="about-text">
-        <p>I am a Master's student in Computer and Information Sciences at the University of Florida, with two years of professional experience as a Software Engineer at JPMorgan Chase. My journey is driven by a passion for solving complex problems at the intersection of software development, AI, and Machine Learning.</p>
-        <p>My core interests lie in applying technology to innovate across diverse fields, from architecting scalable financial systems to exploring AI and Robotics in civil engineering. I thrive in dynamic environments where I can continuously learn and contribute to cutting-edge projects.</p>
+    <div class="container">
+      <p class="section-label">Get to Know Me</p>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+        <!-- Left: Bio -->
+        <div class="about-text reveal">
+          <p>
+            I am a Master's student in Computer and Information Sciences at the University of Florida, maintaining a perfect 4.0 GPA. With two years of professional experience as a Software Engineer at JPMorgan Chase & Co., I've worked on modernizing legacy banking platforms serving 25M+ monthly customer interactions.
+          </p>
+          <p>
+            My core interests lie in building scalable, user-friendly solutions at the intersection of software development, AI, and cloud infrastructure. From architecting microservices to training multimodal deep learning models, I thrive in dynamic environments where I can continuously learn and contribute to cutting-edge projects.
+          </p>
+          <p>
+            When I'm not coding, you can find me capturing and editing moments—I love freezing memories in time to remember for a lifetime.
+          </p>
+          <a href="Bindhu_Sree_Resume.pdf" class="btn-primary" download>
+            <i class="fas fa-file-alt"></i> Download Resume
+          </a>
+        </div>
+
+        <!-- Right: Education -->
+        <div class="education-timeline reveal">
+          <!-- UF -->
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <h3>Masters in Computer & Information Sciences</h3>
+                <p class="edu-school">University of Florida</p>
+              </div>
+            </div>
+            <div class="edu-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Gainesville, FL</span>
+              <span><i class="fas fa-calendar"></i> 2025 – 2027</span>
+              <span class="edu-gpa">GPA: 4.0/4.0</span>
+            </div>
+            <p class="coursework-label">Coursework:</p>
+            <div class="coursework-pills">
+              <span class="coursework-pill">Advanced Data Structures</span>
+              <span class="coursework-pill">Algorithm Development</span>
+              <span class="coursework-pill">Distributed Systems</span>
+              <span class="coursework-pill">Computer Networks</span>
+            </div>
+          </div>
+
+          <!-- CBIT -->
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <h3>Bachelor of Engineering — Information Technology</h3>
+                <p class="edu-school">Chaitanya Bharathi Institute of Technology</p>
+              </div>
+            </div>
+            <div class="edu-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+              <span><i class="fas fa-calendar"></i> 2019 – 2023</span>
+              <span class="edu-gpa">CGPA: 9.03/10</span>
+            </div>
+            <p class="coursework-label">Coursework:</p>
+            <div class="coursework-pills">
+              <span class="coursework-pill">Data Structures & Algorithms</span>
+              <span class="coursework-pill">Machine Learning</span>
+              <span class="coursework-pill">Object-Oriented Programming</span>
+              <span class="coursework-pill">Cloud Computing</span>
+              <span class="coursework-pill">Full-Stack Development</span>
+              <span class="coursework-pill">Software Engineering</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="section">
-    <h2><span>My Experience</span></h2>
-    <div class="vertical-card-grid">
-      <div class="card">
-        <h3>Software Engineer - JPMorgan Chase & Co.</h3>
-        <span>Aug 2023 - Aug 2025</span>
-        <ul>
-          <li>Played a pivotal role in the modernization of 30+ year-old legacy branch and telephone banking applica- tion to modernized servicing application, driving scalability, maintainability, and better user experience across 25M+ monthly customer interactions.</li>
-          <li>Successfully upgraded tech versions of an internet-facing Spring Boot application, mitigating a long- standing high memory utilization issue. This led to a 40% boost in app stability and 50% reduction in memory footprint, significantly reducing production outages.</li>
-          <li>Engineered and implemented a fraud prevention mechanism by enforcing new policy restrictions on Certificate of Deposit (CD) account withdrawals. This proactive solution contributed to a 60% reduction in fraud risk and ensured compliance with internal security standards.</li>
-          <li>Contributed to the development of JPMC Wallet <b>(PAZE)</b> integration, streamlining load-time optimiza- tion and improving the wallet’s responsiveness by 40%, directly impacting customer satisfaction scores and reducing average wait times.</li>
-          <li>Strategically led critical bug resolutions and functional enhancements across Chase’s banker-facing platforms, ensuring seamless customer service delivery and enhancing branch and call center produc- tivity for over 66 million retail banking customers.</li>
-          <li>Engineered and implemented a fraud prevention mechanism by enforcing new policy restrictions on Certificate of Deposit (CD) account withdrawals. This proactive solution contributed to a 60% reduction in fraud risk and ensured compliance with internal security standards.</li>
-        </ul>
-        <span>Technologies & Skills: Java, Spring Boot, React, REST APIs, AWS (EC2, S3, CloudWatch), CI/CD, JIRA, Git,
-        Debugging & Troubleshooting, Performance Optimization, Fraud Detection Systems, Legacy to Modern App Migration, Agile Development, Cross-Team Collaboration, Leadership in Global Competitions</span>
-      </div>
-      <div class="card">
-        <h3>Software Engineer Intern - JPMorgan Chase & Co.</h3>
-        <span>Aug 2022 - Sep 2022</span>
-        <ul>
-          <li>Designed and developed robust RESTful APIs and dynamic front-end interfaces for the Chase Dealer Application using Spring Boot and React, streamlining bulk data upload processes and significantly enhancing dealer workflow efficiency and data accuracy.</li>
-          <li>ImplementedscalableKafkaandMQ-basedmessagingpipelinestosupporthigh-throughput,asynchronous backend communication, enabling reliable processing of large-scale data updates and improving system re- sponsiveness under load.</li>
-        </ul>
-        <span>Tech Stack: Java, Spring Boot, Kafka, MQ, React</span>
+    <div class="container">
+      <p class="section-label">Where I've Worked</p>
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-subtitle">A journey through impactful roles building enterprise-grade software systems.</p>
+
+      <div class="experience-timeline reveal">
+        <!-- 1. Graduate Student Assistant — InterviewBuddy -->
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <h3>Graduate Student Assistant — InterviewBuddy</h3>
+            <p class="exp-company">University of Florida</p>
+            <p class="exp-date"><i class="fas fa-calendar"></i> Mar 2026 – Present</p>
+            <ul>
+              <li>Architected a modern web application with React and Python (FastAPI), implementing RESTful security principles via JWTs and responsive UI design.</li>
+              <li>Integrated LLaMA 3 into an ML-powered RAG pipeline for real-time interview question generation and context-aware candidate scoring.</li>
+              <li>Designed an asynchronous FastAPI backend utilizing SQLite for robust application state management and ChromaDB for semantic vector-based resume parsing.</li>
+            </ul>
+            <div class="exp-tech-stack">
+              <span>React</span>
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>LLaMA 3</span>
+              <span>RAG</span>
+              <span>ChromaDB</span>
+              <span>SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Graduate Research Assistant — TEA Lab -->
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <h3>Graduate Research Assistant</h3>
+            <p class="exp-company">TEA Lab, University of Florida</p>
+            <p class="exp-date"><i class="fas fa-calendar"></i> Jan 2026 – May 2026</p>
+            <ul>
+              <li>Built a transformer-based multimodal architecture integrating RGB and LiDAR data using CNN encoders for action-conditioned future scene prediction.</li>
+              <li>Designed voxelization pipelines & 3D occupancy grids processing 32K+ LiDAR points/frame using PyTorch and Open3D.</li>
+              <li>Trained distributed models on the HiPerGator HPC cluster with mixed-precision, reducing GPU memory usage by ~50%.</li>
+            </ul>
+            <div class="exp-tech-stack">
+              <span>PyTorch</span>
+              <span>Open3D</span>
+              <span>LiDAR</span>
+              <span>Transformers</span>
+              <span>HPC</span>
+              <span>CUDA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Software Engineer — JPMC -->
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <h3>Software Engineer</h3>
+            <p class="exp-company">JPMorgan Chase & Co.</p>
+            <p class="exp-date"><i class="fas fa-calendar"></i> Aug 2023 – Aug 2025</p>
+            <ul>
+              <li>Engineered a scalable microservices architecture using Java, Spring Boot, and Object-Oriented Design to modernize a 30-year-old legacy platform handling 25M+ monthly interactions.</li>
+              <li>Diagnosed critical high-memory utilization by debugging and leading a Spring Boot & Java version upgrade, improving system stability by 40% and cutting production outages by 50%.</li>
+              <li>Integrated new REST APIs for the JPMC Wallet (Paze) and optimized the React frontend, boosting API responsiveness by 40% for 66M+ users.</li>
+              <li>Strengthened application security by implementing business rule validations to restrict CD withdrawals, mitigating fraud risk by 60%.</li>
+            </ul>
+            <div class="exp-tech-stack">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>React</span>
+              <span>REST APIs</span>
+              <span>AWS</span>
+              <span>Microservices</span>
+              <span>CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Software Engineer Intern — JPMC -->
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <h3>Software Engineer Intern</h3>
+            <p class="exp-company">JPMorgan Chase & Co.</p>
+            <p class="exp-date"><i class="fas fa-calendar"></i> Aug 2022 – Sep 2022</p>
+            <ul>
+              <li>Developed an end-to-end full-stack data upload feature using React.js, Spring Boot REST APIs, streamlining workflow efficiency for the Chase Dealer Application.</li>
+              <li>Built and maintained distributed systems using Kafka for asynchronous data processing and reliable event-driven architecture.</li>
+            </ul>
+            <div class="exp-tech-stack">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Kafka</span>
+              <span>React</span>
+              <span>MQ</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section">
-    <h2><span>My Projects</span></h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h4>Image Segmentation using Mask R-CNN</h4>
-        <p>Built a system using a pre-trained Mask R-CNN model to detect and segment objects like people, vehicles, and more.</p>
-        <span>Technologies: CNN, Deep Learning</span>
+    <div class="container">
+      <p class="section-label">What I've Built</p>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A showcase of my best work across AI, full-stack, and systems engineering.</p>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="systems">Systems</button>
       </div>
-      <div class="project-card">
-        <h4>Intrusion Detection with Federated Learning</h4>
-        <p>Developed a privacy-preserving Intrusion Detection System using the Flower Framework for decentralized model training.</p>
-        <span>Technologies: Flower Framework, Network Security</span>
-      </div>
-      <div class="project-card">
-        <h4>YouTube Data Analysis and Prediction System</h4>
-        <p>Analyzed YouTube metadata to predict view counts and classify video categories using ML models. Published in IJRASET.</p>
-        <a href="https://www.ijraset.com/research-paper/youtube-data-analysis-and-prediction-of-views-and-categories" target="_blank">View Publication</a>
-        <span>Technologies: Machine Learning</span>
-      </div>
-      <div class="project-card">
-        <h4>Movie Rating & Recommendation System</h4>
-        <p>A system that predicts movie ratings and recommends films using collaborative filtering techniques.</p>
-        <span>Technologies: Machine Learning</span>
+
+      <div class="projects-carousel-wrapper reveal">
+        <button class="carousel-arrow prev" id="carouselPrev" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="projects-carousel" id="projectsCarousel">
+
+          <!-- Project 1: InterviewBuddy -->
+          <div class="project-card" data-category="ai fullstack">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+              <i class="fas fa-robot" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>InterviewBuddy — AI Interview Platform</h3>
+              <p>An end-to-end AI platform for technical interview simulation. Features LLM-driven interviewer (Groq/LLaMA 3) that generates dynamic questions from uploaded resumes using RAG pipeline.</p>
+              <div class="project-tech-stack">
+                <span>React</span>
+                <span>FastAPI</span>
+                <span>LLaMA 3</span>
+                <span>RAG</span>
+                <span>ChromaDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/interview-buddy" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Neighborhood Community Platform -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #059669, #34d399);">
+              <i class="fas fa-city" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>Neighborhood Community Platform</h3>
+              <p>Full-stack web application using Angular (TypeScript) and Go, featuring community interaction, announcements, and alert systems with a scalable layered backend and PostgreSQL database.</p>
+              <div class="project-tech-stack">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Go</span>
+                <span>PostgreSQL</span>
+                <span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/neighbourhood_community_platform.git" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Reddit Clone -->
+          <div class="project-card" data-category="systems">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #e11d48, #f97316);">
+              <i class="fas fa-comments" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>Reddit Clone — Distributed REST API</h3>
+              <p>Architected a concurrent distributed backend using Gleam/Erlang (OTP) processes and ETS storage, implementing authentication, post creation, commenting, voting and feed retrieval.</p>
+              <div class="project-tech-stack">
+                <span>Gleam</span>
+                <span>Erlang/OTP</span>
+                <span>ETS</span>
+                <span>Linux</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/Reddit_Clone" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: The Collective Consciousness -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #7c3aed, #c084fc);">
+              <i class="fas fa-users" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>The Collective Consciousness</h3>
+              <p>A collaborative web application designed for group interactions and data sharing. Built to handle real-time engagement, updates, and robust state management.</p>
+              <div class="project-tech-stack">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Web App</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/The-Collective-Consciousness" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Agrozone -->
+          <div class="project-card" data-category="ai">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #10b981, #34d399);">
+              <i class="fas fa-leaf" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>Agrozone</h3>
+              <p>A platform developed to assist agricultural management and monitoring, providing tools and insights to improve farming workflows and automated data processing.</p>
+              <div class="project-tech-stack">
+                <span>Python</span>
+                <span>Web App</span>
+                <span>Data Analysis</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/agrozone.git" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Stressify -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+              <i class="fas fa-heartbeat" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>Stressify Flutter App</h3>
+              <p>A mobile application built to help users manage and track their stress levels with interactive, calming features and responsive cross-platform UI design.</p>
+              <div class="project-tech-stack">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Mobile App</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/StressifyFlutterApp.git" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Aeronix Hackathon -->
+          <div class="project-card" data-category="ai">
+            <div class="project-card-image" style="background: linear-gradient(135deg, #d97706, #facc15);">
+              <i class="fas fa-plane" style="color: rgba(255,255,255,0.3); font-size: 4rem; z-index: 1;"></i>
+            </div>
+            <div class="project-card-body">
+              <h3>Aeronix AI Hackathon</h3>
+              <p>AI-based challenge solution developed during the UF IGNITE x Aeronix hackathon to improve engineer workflow and testing of aerospace products using intelligent automation.</p>
+              <div class="project-tech-stack">
+                <span>Python</span>
+                <span>AI/ML</span>
+                <span>Data Analysis</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bindhusreereddy/Aeronix-Hackathon" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-arrow next" id="carouselNext" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </section>
 
+  <!-- ===== SKILLS ===== -->
   <section id="skills" class="section">
-    <h2><span>My Skills</span></h2>
-    <div class="skill-group">
-      <h4>Programming & DSA</h4>
-      <div class="skill-list">
-        <div class="skill">Java</div>
-        <div class="skill">Python</div>
-        <div class="skill">C++</div>
-        <div class="skill">Go</div>
-        <div class="skill">Spring Boot</div>
-        <div class="skill">SQL</div>
-        <div class="skill">DSA</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>Web & Cloud</h4>
-      <div class="skill-list">
-        <div class="skill">ReactJS</div>
-        <div class="skill">HTML/CSS</div>
-        <div class="skill">Javascript</div>
-        <div class="skill">NodeJS</div>
-        <div class="skill">AWS</div>
-        <div class="skill">REST APIs</div>
-        <div class="skill">Microservices</div>
+    <div class="container">
+      <p class="section-label">What I Work With</p>
+      <h2 class="section-title">Skills & Expertise</h2>
+      <p class="section-subtitle">Technologies and tools I use to bring ideas to life.</p>
+
+      <div class="skills-grid reveal">
+        <!-- Languages -->
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-emoji">💻</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Go</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">PHP</span>
+            <span class="skill-pill">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-emoji">⚡</span>
+            <h3>Frameworks & APIs</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">Redux</span>
+            <span class="skill-pill">Angular.js</span>
+            <span class="skill-pill">Spring Boot</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Cloud & Databases -->
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-emoji">☁️</span>
+            <h3>Cloud & Databases</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">AWS (EC2, S3, Lambda)</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">SQLite</span>
+            <span class="skill-pill">Apache Kafka</span>
+            <span class="skill-pill">GraphQL</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">CI/CD</span>
+          </div>
+        </div>
+
+        <!-- ML & Tools -->
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-emoji">🤖</span>
+            <h3>ML & Tools</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">LLMs</span>
+            <span class="skill-pill">LangChain</span>
+            <span class="skill-pill">RAG</span>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">AI Agents (MCP)</span>
+            <span class="skill-pill">Git / GitHub</span>
+            <span class="skill-pill">Jenkins / Maven</span>
+            <span class="skill-pill">Splunk / Grafana</span>
+            <span class="skill-pill">Agile / Jira</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="education" class="section">
-    <h2><span>Education</span></h2>
-    <div class="education-timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>University of Florida</h3>
-          <p>Masters in Computer and Information Sciences</p>
-          <span>2025 – Present</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Chaitanya Bharathi Institute of Technology</h3>
-          <p>Bachelor of Engineering - Information Technology</p>
-          <span>2019 - 2023</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- ===== ACHIEVEMENTS ===== -->
   <section id="achievements" class="section">
-    <h2><span>Achievements</span></h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>AWS Certified</h3>
-        <p>Certified Cloud Practitioner & Developer Associate.</p>
+    <div class="container">
+      <p class="section-label">Recognition</p>
+      <h2 class="section-title">Achievements & Certifications</h2>
+      <p class="section-subtitle">Milestones that reflect my commitment to excellence.</p>
+
+      <div class="achievements-grid reveal">
+        <div class="achievement-card">
+          <div class="achievement-icon">🏆</div>
+          <h3>AWS DeepRacer Global Finalist</h3>
+          <p>Top 8 worldwide at AWS re:Invent 2024 Championship in Las Vegas. Demonstrated expertise in reinforcement learning, model training, and cloud-based ML deployment.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">☁️</div>
+          <h3>AWS Certified Developer Associate</h3>
+          <p>Earned certification applying cloud best practices to design, deploy, and optimize scalable applications on AWS (EC2, S3, Lambda) in production environments.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🌐</div>
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Foundational cloud certification demonstrating comprehensive understanding of AWS services, architecture, security, and pricing models.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🎮</div>
+          <h3>JPMC AWS GameDay Winner</h3>
+          <p>Won 2nd Place in JPMorgan Chase's internal AWS GameDay competition, showcasing cloud architecture problem-solving under pressure.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>AWS DeepRacer Global Finalist</h3>
-        <p>Secured a top 8 global ranking in Las Vegas.</p>
-      </div>
-      <div class="card">
-        <h3>JPMC AWS GameDay Winner</h3>
-        <p>Won 2nd Place in the internal competition.</p>
+
+      <div style="margin-top: 3rem; text-align: center;" class="reveal">
+        <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 1rem;">Additional Certifications</p>
+        <div class="skill-pills" style="justify-content: center;">
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #6366f1;"></i> React JS Complete Guide (Udemy)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #10b981;"></i> Python (Basic) (HackerRank)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #3b82f6;"></i> Programming with Python (Internshala)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #f59e0b;"></i> Joy Of Computing in Python (NPTEL)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #2563eb;"></i> Crash Course on Python (Coursera)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #2563eb;"></i> Intro to Web Development (Coursera)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #9333ea;"></i> L2: Advanced Feature Flagging (Split)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #9333ea;"></i> L1: Feature Flagging Foundations (Split)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #0284c7;"></i> Agile Virtual Experience (Forage)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #2563eb;"></i> AI For Everyone (Coursera)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #2563eb;"></i> Excel Skills for Business (Coursera)</span>
+          <span class="skill-pill"><i class="fas fa-award" style="margin-right: 5px; color: #2563eb;"></i> WordPress Blog for Business (Coursera)</span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
-    <h2><span>Get In Touch</span></h2>
-    <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll get back to you!</p>
-    <a href="mailto:bindhusreer.alla@ufl.edu" class="btn-primary">Say Hello</a>
+    <div class="container">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let's Connect</h2>
+
+      <div class="contact-content reveal">
+        <p class="section-subtitle" style="margin: 0 auto 20px; text-align: center;">
+          My inbox is always open. Whether you have an opportunity, a question, or just want to say hi — I'll get back to you!
+        </p>
+
+        <div class="contact-cards">
+          <a href="mailto:bindhuus24@gmail.com" class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card-text">
+              <p class="label">Email</p>
+              <p class="value">bindhuus24@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/bindhusreereddy" target="_blank" class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="contact-card-text">
+              <p class="label">LinkedIn</p>
+              <p class="value">bindhusreereddy</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/bindhusreereddy" target="_blank" class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-card-text">
+              <p class="label">GitHub</p>
+              <p class="value">bindhusreereddy</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-cta">
+          <a href="mailto:bindhuus24@gmail.com" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Say Hello
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
-</div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-socials">
+          <a href="https://github.com/bindhusreereddy" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/bindhusreereddy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:bindhuus24@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-text">Designed & Built by <span>Bindhu Sree Alla</span> · © 2026</p>
+      </div>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
